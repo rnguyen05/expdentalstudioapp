@@ -1,1 +1,2 @@
-# expdentalstudioapp
+# DentalOfficeApp
+Application for Dental Office

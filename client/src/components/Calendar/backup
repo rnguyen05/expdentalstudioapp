@@ -1,0 +1,369 @@
+import React, {Component} from "react";
+import tuiCalendar from 'tui-calendar'; 
+import Changeview from './Changeview/Changeview';
+// import Renderrange from './Renderrange/Renderrange'
+import moment from 'moment';
+class Calendar extends Component {
+    state={
+    
+        calendarTypeName:'DropDown',
+        // dangerouslySetInnerHTML:'',
+       
+       
+       
+        calendar: new tuiCalendar(document.getElementById('calendar'), 
+        {defaultView: 'week',
+        taskView: true,    // can be also ['milestone', 'task']
+      scheduleView: true,  // can be also ['allday', 'time']
+      useCreationPopup: true,
+        useDetailPopup: true,
+     template: {
+    //       milestone: function(schedule) {
+    //           return '<span style="color:red;"><i class="fa fa-flag"></i> ' + schedule.title + '</span>';
+    //       },
+    //       milestoneTitle: function() {
+    //           return 'Milestone';
+    //       },
+    //       task: function(schedule) {
+    //           return '&nbsp;&nbsp;#' + schedule.title;
+    //       },
+    //       taskTitle: function() {
+    //           return '<label><input type="checkbox" />Task</label>';
+    //       },
+    //       allday: function(schedule) {
+    //           return schedule.title + ' <i class="fa fa-refresh"></i>';
+    //       },
+    //       alldayTitle: function() {
+    //           return 'All Day';
+    //       },
+    //       time: function(schedule) {
+    //           return schedule.title + ' <i class="fa fa-refresh"></i>' + schedule.start;
+    //       }
+    //   },
+    template: {
+        // milestone: function(schedule) {
+        //     return '<span style="color:red;"><i class="fa fa-flag"></i> ' + schedule.title + '</span>';
+        // },
+        milestone: function(model) {
+            return '<span class="calendar-font-icon ic-milestone-b"></span> <span style="background-color: ' + model.bgColor + '">' + model.title + '</span>';
+        },
+        milestoneTitle: function() {
+            return 'Milestone';
+        },
+        task: function(schedule) {
+            return '&nbsp;&nbsp;#' + schedule.title;
+        },
+        taskTitle: function() {
+            return '<label><input type="checkbox" />Task</label>';
+        },
+        allday: function(schedule) {
+            return schedule.title + ' <i class="fa fa-refresh"></i>';
+        },
+        // allday: function(schedule) {
+        //     return this.getTimeTemplate(schedule, true);
+        // },
+        // time: function(schedule) {
+        //     return this.getTimeTemplate(schedule, false);
+        // },
+        alldayTitle: function() {
+            return 'All Day';
+        },
+        time: function(schedule) {
+            return schedule.title + ' <i class="fa fa-refresh"></i>' + schedule.start;
+        },
+        // monthMoreTitleDate: function(date) {
+        //     date = new Date(date);
+        //     return tui.util.formatDate('MM-DD', date) + '(' + daynames[date.getDay()] + ')';
+        // },
+        monthMoreClose: function() {
+            return '<i class="fa fa-close"></i>';
+        },
+        monthGridHeader: function(model) {
+            var date = new Date(model.date);
+            var template = '<span class="tui-full-calendar-weekday-grid-date">' + date.getDate() + '</span>';
+            var today = model.isToday ? 'TDY' : '';
+            if (today) {
+                template += '<span class="tui-full-calendar-weekday-grid-date-decorator">' + today + '</span>';
+            }
+            // if (tempHolidays[date.getDate()]) {
+            //     template += '<span class="tui-full-calendar-weekday-grid-date-title">' + tempHolidays[date.getDate()] + '</span>';
+            // }
+            return template;
+        },
+        monthGridHeaderExceed: function(hiddenSchedules) {
+            return '<span class="calendar-more-schedules">+' + hiddenSchedules + '</span>';
+        },
+
+        monthGridFooter: function() {
+            return '<div class="calendar-new-schedule-button">New Schedule</div>';
+        },
+
+        monthGridFooterExceed: function(hiddenSchedules) {
+            return '<span class="calendar-footer-more-schedules">+ See ' + hiddenSchedules + ' more events</span>';
+        },
+        weekDayname: function(dayname) {
+            return '<span class="calendar-week-dayname-name">' + dayname.dayName + '</span><br><span class="calendar-week-dayname-date">' + dayname.date + '</span>';
+        },
+        monthDayname: function(dayname) {
+            return '<span class="calendar-week-dayname-name">' + dayname.label + '</span>';
+        }
+    }
+    ,
+      month: {
+          daynames: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+          startDayOfWeek: 0,
+          narrowWeekend: true,
+          visibleWeek: 6
+      },
+      week: {
+          daynames: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+          startDayOfWeek: 0
+         
+          
+      }
+    }
+  })
+}
+
+ getTimeTemplate = (schedule, isAllDay)=> {
+    var html = [];
+    var start = moment(schedule.start.toUTCString());
+    if (!isAllDay) {
+        html.push('<strong>' + start.format('HH:mm') + '</strong> ');
+    }
+    if (schedule.isPrivate) {
+        html.push('<span class="calendar-font-icon ic-lock-b"></span>');
+        html.push(' Private');
+    } else {
+        if (schedule.isReadOnly) {
+            html.push('<span class="calendar-font-icon ic-readonly-b"></span>');
+        } else if (schedule.recurrenceRule) {
+            html.push('<span class="calendar-font-icon ic-repeat-b"></span>');
+        } else if (schedule.attendees.length) {
+            html.push('<span class="calendar-font-icon ic-user-b"></span>');
+        } else if (schedule.location) {
+            html.push('<span class="calendar-font-icon ic-location-b"></span>');
+        }
+        html.push(' ' + schedule.title);
+    }
+
+    return html.join('');
+}
+
+      createSchedule= calendar=>{
+        calendar.createSchedules([
+            {
+                id: '1',
+                calendarId: '1',
+                title: 'my schedule',
+                category: 'time',
+                dueDateClass: '',
+                start: '2018-07-29T22:30:00+09:00',
+                end: '2018-07-30T02:30:00+09:00'
+            },
+            {
+                id: '2',
+                calendarId: '1',
+                title: 'second schedule',
+                category: 'time',
+                dueDateClass: '',
+                start: '2018-01-18T17:30:00+09:00',
+                end: '2018-01-19T17:31:00+09:00'
+            }
+        ]);
+      }
+      
+     setoptionsandview = (calendar,options,viewName,flag)=>{
+         if(options){
+             calendar.setOptions(options,false);
+             console.log("insetoption function",options);
+            } ;
+        //  calendar.setOptions(options,flag);
+
+          calendar.changeView(viewName,flag);
+          console.log("in changeView function",viewName);
+        return calendar;
+     };
+     changeview = (calendar,viewName,flag)=>{
+       
+        return calendar;
+     };
+
+   
+
+
+  componentDidMount(){
+
+    this.createSchedule(this.state.calendar);
+  this.state.calendar.render();
+  };
+
+
+  getDataAction = target=> {
+    return target.dataset ? target.dataset.action : target.getAttribute('data-action');
+}
+getValue = target =>{
+    return  target.getAttribute('value');
+}
+ onClickMenu = event=> {
+    //var target = $(event.target).closest('a[role="menuitem"]')[0];
+    var target = event.target;
+    
+    console.log("target",target);
+    
+   
+    // console.log("this.state.action",this.state.action);
+    console.log("target.value",this.getValue(target));
+    var action = this.getDataAction(target);
+    console.log("action",action);
+ this.setState({value:this.getValue(target)});
+ console.log("this.state.value==>",this.state.value);
+  var options = this.state.calendar.getOptions();
+    var viewName = '';
+    console.log("options",options);
+    this.setState({calendarTypeName:this.getValue(target)})
+
+  
+    switch (action) {
+        case 'toggle-daily':
+            viewName = 'day';
+            console.log(viewName);
+            break;
+        case 'toggle-weekly':
+            viewName = 'week';
+            console.log(viewName);
+            break;
+        case 'toggle-monthly':
+           options.month.visibleWeeksCount = 6;
+            viewName = 'month';
+            console.log(viewName);
+            break;
+        case 'toggle-weeks2':
+           options.month.visibleWeeksCount = 2;
+            viewName = 'month';
+            break;
+        case 'toggle-weeks3':
+           options.month.visibleWeeksCount = 3;
+            viewName = 'month';
+            console.log(viewName);
+            break;
+        case 'toggle-narrow-weekend':
+           options.month.narrowWeekend = !options.month.narrowWeekend;
+           options.week.narrowWeekend = !options.week.narrowWeekend;
+           viewName = this.state.calendar.getViewName();
+          // viewName = 'toggle-narrow-weekend';
+           console.log(viewName);
+           target.querySelector('input').checked = options.month.narrowWeekend;
+            break;
+        case 'toggle-start-day-1':
+           options.month.startDayOfWeek = options.month.startDayOfWeek ? 0 : 1;
+           options.week.startDayOfWeek = options.week.startDayOfWeek ? 0 : 1;
+           viewName = this.state.calendar.getViewName();
+          //viewName = 'toggle-start-day-1';
+          console.log(viewName);
+           target.querySelector('input').checked = options.month.startDayOfWeek;
+            break;
+        case 'toggle-workweek':
+           options.month.workweek = !options.month.workweek;
+           options.week.workweek = !options.week.workweek;
+           viewName = this.state.calendar.getViewName();
+         // viewName = 'toggle-workweek';
+          console.log(viewName);
+           target.querySelector('input').checked = !options.month.workweek;
+            break;
+        default:
+            break;
+    }
+    console.log("options******",options);
+    console.log("viewName******", viewName);
+    this.setState({
+        calendar: this.setoptionsandview(this.state.calendar,options,viewName,true)
+    });
+ //  this.renderrange(this.state.calendar);
+   
+}
+renderrange = calendar=>{
+    let options = calendar.getOptions();
+    let viewName = calendar.getViewName();
+   var renderRange = document.getElementById('renderRange');
+    //     var options = cal.getOptions();
+    //     var viewName = cal.getViewName();
+        var html = [];
+        if (viewName === 'day') {
+            html.push(moment(calendar.getDate().getTime()).format('YYYY.MM.DD'));
+        } else if (viewName === 'month' &&
+            (!options.month.visibleWeeksCount || options.month.visibleWeeksCount > 4)) {
+            html.push(moment(calendar.getDate().getTime()).format('YYYY.MM'));
+        } else {
+            html.push(moment(calendar.getDateRangeStart().getTime()).format('YYYY.MM.DD'));
+            html.push(' ~ ');
+            html.push(moment(calendar.getDateRangeEnd().getTime()).format(' MM.DD'));
+        }
+        let temp= html.join('');
+        console.log("temp", temp);
+        renderRange.innerHTML =temp;
+        //console.log("html.join('')",html.join(''));
+        // 
+        // console.log("temp", temp);
+        // return {__html: temp};
+        // console.log("html",html.join(''));
+}
+onClickCalendar = event =>{
+ console.log("evetnt",event);
+}
+// clickSchedule = event=>{
+//     console.log("clickSchedule",event);
+// }
+
+// clickDayname = event=>{
+//     console.log("clickDayname",event);
+// }
+
+// beforeCreateSchedule=event=>{
+//     console.log("beforeCreateSchedule",event);
+// }
+// beforeUpdateSchedule=event=>{
+//     console.log("beforeUpdateSchedule",event);
+// }
+// beforeDeleteSchedule=event=>{
+//     console.log("beforeDeleteSchedule",event);
+// }
+// afterRenderSchedule=event=>{
+//     console.log("afterRenderSchedule",event);
+// }
+render(){
+    return(
+  <div className="Calendar"  >
+    <Changeview 
+    calendarTypeName={this.state.calendarTypeName}
+    onClickMenu={this.onClickMenu}
+    />
+     <div>
+        <span id="renderRange" 
+        className="render-range" 
+       
+        
+    //    calendar={this.state.calendar}
+    //   dangerouslySetInnerHTML ={this.renderrange} 
+       ></span>
+    </div>
+    {/* <Renderrange 
+    calendar={this.state.calendar}
+   //renderrange = {this.renderrange}
+    // dangerouslySetInnerHTML={this.state.dangerouslySetInnerHTML}  
+    /> */}
+    <div id="calendar" 
+    calendar={this.state.calendar} 
+    onClick={this.onClickCalendar}
+    // clickSchedule={this.clickSchedule}
+    // clickDayname={this.clickDayname}
+    // beforeCreateSchedule={this.beforeCreateSchedule}
+    // beforeUpdateSchedule={this.beforeUpdateSchedule}
+    // beforeDeleteSchedule={this.beforeDeleteSchedule}
+    // afterRenderSchedule={this.afterRenderSchedule}
+    ></div>
+  </div>);
+}
+}
+  
+export default Calendar;

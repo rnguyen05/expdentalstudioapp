@@ -1,0 +1,11 @@
+#lnb-calendars {
+    display:inline-block;
+    width:90%;
+}
+.lnb-calendars-item,.lnb-calendars-d1 {
+    display:inline-block;
+}
+.Changeview {
+    display:inline-block;
+    width:5%; 
+}

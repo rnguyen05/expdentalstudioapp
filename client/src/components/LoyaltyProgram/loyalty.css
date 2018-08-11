@@ -1,0 +1,13 @@
+.section-loyalty {
+  background: url("../img/loyalty/smile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px solid lightgray;
+}
+/* 
+.loyalty {
+  color: black;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 15pt;
+  padding: 30px;
+} */

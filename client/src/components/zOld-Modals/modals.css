@@ -1,0 +1,50 @@
+/* Popup Modal */
+.popup_inner {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  width: 300px;
+  margin: auto;
+  background: gray;
+  border-radius: 4px;
+  z-index: 8000;
+}
+
+.login-bg {
+  background-color: black;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.login-logo {
+  width: 200px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.login-logomb {
+  display: none;
+}
+
+.login-logo:hover {
+  background-color: white;
+  zoom: 1.2;
+}
+
+.login-form {
+  background-color: white;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.modal-footer {
+  background-color: gray;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.signup {
+  color: white;
+  text-decoration: none;
+}

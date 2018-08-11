@@ -1,0 +1,1598 @@
+/* Testlogin CSS */
+#user-reg {
+  margin: auto;
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+.user-reg-inner {
+  margin: auto;
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+  opacity: 0.7;
+  z-index: 30;
+}
+/* End Testlogin CSS */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+label {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 15pt;
+}
+
+h2 {
+  font-family: "Francois One", sans-serif;
+  font-size: 25pt;
+}
+
+.h2-white {
+  font-family: "Francois One", sans-serif;
+  font-size: 25pt;
+  color: white;
+}
+
+a {
+  color: black;
+}
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+.nav {
+  padding-top: 10px;
+}
+
+.h6-white {
+  color: white;
+}
+
+h6 {
+  font-family: "Francois One", sans-serif;
+  font-size: 18pt;
+}
+
+p {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 15pt;
+  padding: 10px;
+}
+
+.p-white {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 15pt;
+  color: white;
+  padding: 10px;
+}
+
+.fas {
+  vertical-align: middle;
+}
+.clearfix {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.clear-top {
+  margin-top: 30px;
+}
+
+li {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 15pt;
+}
+
+/* Popup Modal */
+.popup_inner {
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 25%;
+  bottom: 25%;
+  width: 300px;
+  margin: auto;
+  background: gray;
+  border-radius: 4px;
+}
+
+.login-bg {
+  background-color: black;
+  border-radius: 0px 0px 4px 4px;
+}
+
+.login-logo {
+  width: 200px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.login-logo:hover {
+  background-color: white;
+  zoom: 1.2;
+}
+
+.login-form {
+  background-color: white;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.modal-footer {
+  background-color: gray;
+  border-radius: 0px 0px 4px 4px;
+}
+
+/* Start @media only screen and (max-width: 320px) */
+@media only screen and (max-width: 320px) {
+  p,
+  .p-white {
+    font-size: 12pt;
+    /* text-align: center; */
+  }
+
+  .p-services {
+    font-size: 10pt;
+  }
+
+  h2 {
+    font-size: 17pt;
+    text-align: center;
+  }
+  .h2-white {
+    text-align: center;
+    font-size: 17pt;
+  }
+  h6 {
+    font-size: 15pt;
+  }
+
+  .h6-white {
+    font-size: 15pt;
+  }
+
+  li,
+  label {
+    font-size: 12pt;
+  }
+
+  .style-hr {
+    min-width: 50%;
+  }
+
+  /*-------------- Prevent Horizontal swipe ------------*/
+  body {
+    overflow-x: hidden !important;
+  }
+  .container {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+  /*------------ Background Images -------------*/
+  /* Header */
+  header {
+    width: 100%;
+    min-height: 30vh;
+    background: url("./components/img/dental-studiox320.jpg");
+    background-position: top center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .section-loyalty {
+    background: url("./components/img/loyalty/smilex320.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid lightgray;
+  }
+
+  .section-about {
+    background: url("./components/img/dentist-bgx320.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 1px solid lightgray;
+    position: relative;
+  }
+
+  .section-promo {
+    background: url("./components/img/loyalty/smilex320.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid lightgray;
+    position: relative;
+  }
+
+  .section-footer {
+    margin-top: 380px;
+    padding-top: 70px;
+    background: url("./components/img/dentist-bgx320.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #04091e;
+    color: #fff;
+    padding-bottom: 20px;
+    border-top: 1px solid lightgray;
+  }
+
+  /*Navbar */
+  .call-today-sm {
+    display: block;
+    margin-right: 5px;
+    color: #ce8bc8;
+    /* padding: 5px;  */
+  }
+  .call-today-sm:hover {
+    color: rgb(196, 196, 12);
+  }
+
+  .logo {
+    margin-left: -90px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .call-today {
+    display: none;
+  }
+  /*Side buttons*/
+  .appoint {
+    top: 5%;
+  }
+  .sidebtn {
+    display: inline-block;
+    margin-left: -20px;
+    text-align: right;
+    width: 80px;
+    height: 45px;
+    font-size: 10px;
+    font-family: "Roboto Condensed", sans-serif;
+    box-shadow: 0 6px 4px -3px #000000;
+    position: relative;
+  }
+
+  /* Popup Modal */
+  .popup_inner {
+    position: absolute;
+    left: 25%;
+    right: 25%;
+    top: 25%;
+    bottom: 25%;
+    width: 200px;
+    /* margin: auto; */
+    background: gray;
+    border-radius: 4px;
+  }
+
+  .login-logo {
+    display: none;
+  }
+
+  .logo-mb-row {
+    width: 90%;
+    margin: auto;
+  }
+
+  .login-logomb {
+    display: block;
+    width: 40px;
+    margin-right: 15px;
+  }
+
+  .login-form {
+    background-color: white;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px;
+    width: 180px;
+  }
+
+  /* About */
+  .wrap-content {
+    display: none;
+  }
+  .dentist-img {
+    min-width: 100%;
+  }
+
+  /*About Us Network*/
+  .network {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  .network2 {
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  .network3 {
+    width: 80px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  /*Our Services*/
+  .services-icon {
+    width: 100%;
+  }
+
+  /* Testimonials */
+  Carousel {
+    width: 100%;
+  }
+  /* Contact */
+  .contact-body {
+    display: none;
+  }
+
+  #contact-form {
+    margin-bottom: 20px;
+  }
+  /*Footer*/
+  .section-footer {
+    margin-top: 380px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .footer-address {
+    font-size: 12pt;
+  }
+
+  .footer-content {
+    min-width: 250px;
+  }
+
+  .social-icons {
+    min-width: 250px;
+  }
+}
+/* End of @media only screen and (max-width: 320px) */
+
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+  /*-------------- Prevent Horizontal swipe ------------*/
+  body {
+    overflow-x: hidden !important;
+  }
+  .container {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  /*------------ Background Images -------------*/
+  /* Header */
+  header {
+    width: 100%;
+    min-height: 30vh;
+    background: url("./components/img/dental-studiox480.jpg");
+    background-position: top center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .section-loyalty {
+    background: url("./components/img/loyalty/smilex480.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid lightgray;
+  }
+
+  .section-about {
+    background: url("./components/img/dentist-bgx480.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 1px solid lightgray;
+    position: relative;
+  }
+
+  .section-promo {
+    background: url("./components/img/loyalty/smilex480.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid lightgray;
+    position: relative;
+  }
+
+  .section-footer {
+    margin-top: 380px;
+    padding-top: 70px;
+    background: url("./components/img/dentist-bgx480.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #04091e;
+    color: #fff;
+    padding-bottom: 20px;
+    border-top: 1px solid lightgray;
+  }
+
+  /*Navbar */
+  .call-today-sm {
+    display: block;
+    margin-right: 5px;
+    color: #ce8bc8;
+    /* padding: 5px;  */
+  }
+  .call-today-sm:hover {
+    color: rgb(196, 196, 12);
+  }
+
+  .logo {
+    margin-left: -90px;
+  }
+
+  .logo-text {
+    display: none;
+  }
+
+  .call-today {
+    display: none;
+  }
+  /*Side buttons*/
+  .appoint {
+    top: 5%;
+  }
+  .sidebtn {
+    display: inline-block;
+    margin-left: -25px;
+    text-align: right;
+    width: 60px;
+    height: 35px;
+    font-size: 8px;
+    font-family: "Roboto Condensed", sans-serif;
+    box-shadow: 0 6px 4px -3px #000000;
+  }
+
+  /* About */
+  .wrap-content {
+    display: none;
+  }
+  .dentist-img {
+    width: 100%;
+  }
+
+  /*About Us Network*/
+  .network {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  .network2 {
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  .network3 {
+    width: 80px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  /*Our Services*/
+  .services-icon {
+    width: 100%;
+  }
+
+  /* Testimonials */
+  Carousel {
+    width: 100%;
+  }
+  /* Contact */
+  .contact-body {
+    display: none;
+  }
+
+  #contact-form {
+    margin-bottom: 20px;
+  }
+  /*Footer*/
+  .section-footer {
+    margin-top: 380px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .footer-address {
+    font-size: 12pt;
+  }
+
+  .footer-content {
+    min-width: 250px;
+  }
+
+  .social-icons {
+    min-width: 250px;
+  }
+}
+/* End of @media only screen and (min-width: 321px) and (max-width: 480px) */
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  p,
+  .p-white {
+    font-size: 15pt;
+    /* text-align: center; */
+    padding: 30px;
+  }
+
+  .p-services {
+    font-size: 12pt;
+  }
+
+  h2 {
+    font-size: 20pt;
+    text-align: center;
+  }
+  .h2-white {
+    text-align: center;
+    font-size: 20pt;
+  }
+  h6 {
+    font-size: 15pt;
+  }
+  li,
+  label {
+    font-size: 12pt;
+  }
+
+  .style-hr {
+    min-width: 50%;
+  }
+  /*-------------- Prevent Horizontal swipe ------------*/
+
+  body {
+    overflow-x: hidden !important;
+  }
+  .container {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  /*------------ Background Images -------------*/
+  /* Header */
+  header {
+    width: 100%;
+    min-height: 80vh;
+    background: url("./components/img/dental-studiox768.jpg");
+    background-position: top center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .section-loyalty {
+    background: url("./components/img/loyalty/smilex768.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid lightgray;
+  }
+
+  .wrap-content {
+    background: url("./components/img/dentist-bgx768.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 1px solid lightgray;
+    position: relative;
+  }
+
+  .section-promo {
+    background: url("./components/img/loyalty/smilex768.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid lightgray;
+    position: relative;
+  }
+
+  .section-footer {
+    margin-top: 380px;
+    padding-top: 70px;
+    background: url("./components/img/dentist-bgx768.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #04091e;
+    color: #fff;
+    padding-bottom: 20px;
+    border-top: 1px solid lightgray;
+  }
+
+  /*Navbar */
+  .call-today-sm {
+    display: block;
+    margin-right: 5px;
+    color: #ce8bc8;
+    /* padding: 5px;  */
+  }
+  .call-today-sm:hover {
+    color: rgb(196, 196, 12);
+  }
+
+  .logo {
+    margin-left: -350px;
+  }
+
+  .logo-text {
+    font-family: "Francois One", sans-serif;
+    font-size: 20pt;
+    color: black;
+    text-decoration: none;
+  }
+
+  .call-today {
+    display: none;
+  }
+  /*Side buttons*/
+  .appoint {
+    top: 5%;
+  }
+  .sidebtn {
+    display: inline-block;
+    margin-left: -25px;
+    text-align: right;
+    width: 80px;
+    height: 40px;
+    font-size: 9px;
+    font-family: "Roboto Condensed", sans-serif;
+    box-shadow: 0 6px 4px -3px #000000;
+  }
+
+  .section-about {
+    display: none;
+  }
+  /* About */
+  .wrap-content {
+    display: block;
+  }
+  .dentist-img {
+    width: 100%;
+  }
+
+  /*About Us Network*/
+  .network {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  .network2 {
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  .network3 {
+    width: 80px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  /*Our Services*/
+  .services-icon {
+    width: 50%;
+  }
+
+  /* Testimonials */
+  Carousel {
+    width: 100%;
+  }
+  /* Contact */
+  .contact-body {
+    display: none;
+  }
+
+  #contact-form {
+    margin-bottom: 20px;
+  }
+  /*Footer*/
+  .section-footer {
+    margin-top: 380px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .footer-address {
+    font-size: 15pt;
+  }
+
+  .footer-content {
+    min-width: 300px;
+  }
+
+  .social-icons {
+    min-width: 250px;
+  }
+}
+/* End of @media only screen and (min-width: 321px) and (max-width: 480px) */
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  p,
+  .p-white {
+    font-size: 15pt;
+  }
+
+  .p-services {
+    font-size: 12pt;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 25pt;
+    text-align: center;
+  }
+  .h2-white {
+    text-align: center;
+    font-size: 25pt;
+  }
+  h6 {
+    font-size: 15pt;
+  }
+  li,
+  label {
+    font-size: 15pt;
+  }
+
+  .style-hr {
+    min-width: 50%;
+  }
+  /*-------------- Prevent Horizontal swipe ------------*/
+
+  body {
+    overflow-x: hidden !important;
+  }
+  .container {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  /*------------ Background Images -------------*/
+  /* Header */
+  header {
+    width: 100%;
+    min-height: 45vh;
+    background: url("./components/img/dental-studiox1024.jpg");
+    background-position: top center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .section-loyalty {
+    background: url("./components/img/loyalty/smilex1024.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid lightgray;
+  }
+
+  .wrap-content {
+    display: block;
+    background: url("./components/img/dentist-bgx1024.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 1px solid lightgray;
+    position: relative;
+  }
+
+  .section-promo {
+    background: url("./components/img/loyalty/smilex1024.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid lightgray;
+    position: relative;
+  }
+
+  .section-footer {
+    margin-top: 380px;
+    padding-top: 70px;
+    background: url("./components/img/dentist-bgx1024.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #04091e;
+    color: #fff;
+    padding-bottom: 20px;
+    border-top: 1px solid lightgray;
+  }
+
+  /*Navbar */
+  .call-today-sm {
+    display: block;
+    margin-right: 5px;
+    color: #ce8bc8;
+    /* padding: 5px;  */
+  }
+  .call-today-sm:hover {
+    color: rgb(196, 196, 12);
+  }
+
+  .logo {
+    margin-left: -350px;
+  }
+
+  .logo-text {
+    font-family: "Francois One", sans-serif;
+    font-size: 20pt;
+    color: black;
+    text-decoration: none;
+  }
+
+  .call-today {
+    display: none;
+  }
+  /*Side buttons*/
+  .appoint {
+    top: 15%;
+  }
+  .sidebtn {
+    display: inline-block;
+    margin-left: -25px;
+    text-align: right;
+    width: 100px;
+    height: 50px;
+    font-size: 12px;
+    font-family: "Roboto Condensed", sans-serif;
+    box-shadow: 0 6px 4px -3px #000000;
+  }
+
+  /* About Us */
+  .section-about {
+    display: none;
+  }
+  .dentist-img {
+    float: left;
+    width: 30%;
+    padding-right: 15px;
+  }
+
+  .wrap-paragraph {
+    background-color: black;
+    float: none;
+    padding-right: 15px;
+    text-align: left;
+  }
+
+  /*About Us Network*/
+  .network {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  .network2 {
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  .network3 {
+    width: 80px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  /*Our Services*/
+  .services-icon {
+    width: 40%;
+  }
+
+  /* Loyalty */
+  .loyalty-content {
+    max-width: 65%;
+    text-align: left;
+  }
+
+  .loyaltyBtn {
+    text-align: left;
+  }
+
+  /* Testimonials */
+  Carousel {
+    width: 100%;
+  }
+  /* Contact */
+  .contact-body {
+    display: none;
+  }
+
+  #contact-form {
+    margin: 0px 40px 20px 40px;
+  }
+  /*Footer*/
+  .section-footer {
+    margin-top: 380px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .footer-address {
+    font-size: 15pt;
+  }
+
+  .footer-content {
+    min-width: 250px;
+    text-align: center;
+  }
+
+  .social-icons {
+    width: 200px;
+    text-align: center;
+  }
+  .fab {
+    min-width: 100px;
+  }
+}
+/* End of @media only screen and (min-width: 768px) and (max-width: 1024px) */
+
+@media only screen and (min-width: 1024px) and (max-width: 1439px) {
+  p,
+  .p-white {
+    font-size: 15pt;
+  }
+
+  .p-services {
+    font-size: 15pt;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 25pt;
+    text-align: center;
+  }
+  .h2-white {
+    text-align: center;
+    font-size: 25pt;
+  }
+  h6 {
+    font-size: 15pt;
+  }
+  li,
+  label {
+    font-size: 15pt;
+  }
+
+  .style-hr {
+    min-width: 50%;
+  }
+  /*-------------- Prevent Horizontal swipe ------------*/
+
+  body {
+    overflow-x: hidden !important;
+  }
+  .container {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  /*------------ Background Images -------------*/
+  /* Header */
+  header {
+    width: 100%;
+    min-height: 85vh;
+    background: url("./components/img/dental-studiox1224.jpg");
+    background-position: top center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .section-loyalty {
+    background: url("./components/img/loyalty/smilex1224.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid lightgray;
+  }
+
+  .wrap-content {
+    display: block;
+    background: url("./components/img/dentist-bgx1224.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 1px solid lightgray;
+    position: relative;
+  }
+
+  .section-promo {
+    background: url("./components/img/loyalty/smilex1224.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid lightgray;
+    position: relative;
+  }
+
+  .section-footer {
+    margin-top: 380px;
+    padding-top: 70px;
+    background: url("./components/img/dentist-bgx1224.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #04091e;
+    color: #fff;
+    padding-bottom: 20px;
+    border-top: 1px solid lightgray;
+  }
+
+  /*Navbar */
+  .call-today-sm {
+    display: none;
+    margin-right: 5px;
+    color: #ce8bc8;
+    /* padding: 5px;  */
+  }
+  .call-today-sm:hover {
+    color: rgb(196, 196, 12);
+  }
+
+  .logo {
+    margin-left: -300px;
+  }
+
+  .logo-text {
+    font-family: "Francois One", sans-serif;
+    font-size: 20pt;
+    font-weight: 1.5em;
+    text-decoration: none;
+    color: black;
+  }
+
+  .call-today {
+    display: block;
+  }
+  /*Side buttons*/
+  .appoint {
+    top: 20%;
+  }
+  .sidebtn {
+    display: inline-block;
+    margin-left: -25px;
+    text-align: right;
+    width: 120px;
+    height: 60px;
+    font-size: 15px;
+    font-family: "Roboto Condensed", sans-serif;
+    box-shadow: 0 6px 4px -3px #000000;
+  }
+
+  /* About Us */
+  .section-about {
+    display: none;
+  }
+  .dentist-img {
+    float: left;
+    width: 21%;
+    padding-right: 15px;
+  }
+
+  .wrap-paragraph {
+    background-color: black;
+    float: none;
+    padding-right: 15px;
+    text-align: left;
+  }
+
+  /*About Us Network*/
+  .network {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 17px;
+  }
+  .network2 {
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 17px;
+  }
+  .network3 {
+    width: 80px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 17px;
+  }
+  /*Our Services*/
+  .services-icon {
+    width: 25%;
+  }
+
+  /* Loyalty */
+  ul {
+    text-align: left;
+    padding-left: 50px;
+  }
+
+  .loyalty-content {
+    max-width: 60%;
+    text-align: left;
+    padding-left: 30px;
+  }
+
+  .loyaltyBtn {
+    text-align: left;
+    padding-left: 30px;
+  }
+
+  /* Testimonials */
+  Carousel {
+    width: 100%;
+  }
+  /* Contact */
+  .contact-body {
+    display: none;
+  }
+
+  #contact-form {
+    margin: 0px 20% 20px 20%;
+  }
+  /*Footer*/
+  .section-footer {
+    margin-top: 380px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .footer-address {
+    font-size: 15pt;
+  }
+
+  .footer-content {
+    min-width: 250px;
+    text-align: center;
+  }
+
+  .social-icons {
+    width: 200px;
+    text-align: center;
+  }
+  .fab {
+    min-width: 100px;
+  }
+}
+/* End of @media only screen and (min-width: 1224px) */
+
+@media only screen and (min-width: 1440px) {
+  p,
+  .p-white {
+    font-size: 15pt;
+  }
+
+  .p-services {
+    font-size: 15pt;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 25pt;
+    text-align: center;
+  }
+  .h2-white {
+    text-align: center;
+    font-size: 25pt;
+  }
+  h6 {
+    font-size: 15pt;
+  }
+  li,
+  label {
+    font-size: 15pt;
+  }
+
+  .style-hr {
+    width: 50%;
+  }
+  /*-------------- Prevent Horizontal swipe ------------*/
+
+  body {
+    overflow-x: hidden !important;
+  }
+  .container {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  /*------------ Background Images -------------*/
+  /* Header */
+  header {
+    width: 100%;
+    min-height: 90vh;
+    background: url("./components/img/dental-studiox1224.jpg");
+    background-position: top center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .section-loyalty {
+    background: url("./components/img/loyalty/smilex1224.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid lightgray;
+  }
+
+  .section-promo {
+    background: url("./components/img/loyalty/smilex1224.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid lightgray;
+    position: relative;
+  }
+
+  .wrap-content {
+    display: block;
+    background: url("./components/img/dentist-bgx1224.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 1px solid lightgray;
+    position: relative;
+  }
+
+  .section-footer {
+    margin-top: 380px;
+    padding-top: 70px;
+    background: url("./components/img/dentist-bgx1224.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #04091e;
+    color: #fff;
+    padding-bottom: 20px;
+    border-top: 1px solid lightgray;
+  }
+
+  /*Navbar */
+  .call-today-sm {
+    display: none;
+    margin-right: 5px;
+    color: #ce8bc8;
+    /* padding: 5px;  */
+  }
+  .call-today-sm:hover {
+    color: rgb(196, 196, 12);
+  }
+
+  .logo {
+    margin-left: -350px;
+  }
+
+  .logo-text {
+    font-family: "Francois One", sans-serif;
+    font-size: 22pt;
+    font-weight: 1.5em;
+    text-decoration: none;
+    color: black;
+  }
+
+  .logo-text:hover {
+    font-family: "Francois One", sans-serif;
+    font-size: 22pt;
+    font-weight: 1.5em;
+    text-decoration: none;
+    color: gray;
+  }
+
+  .logo-text.shrink {
+    width: 40px;
+    height: 40px;
+    transition: 1s;
+    text-decoration: none;
+  }
+
+  .call-today {
+    display: block;
+  }
+  /*Side buttons*/
+  .appoint {
+    top: 20%;
+  }
+  .sidebtn {
+    display: inline-block;
+    margin-left: -25px;
+    text-align: right;
+    width: 120px;
+    height: 60px;
+    font-size: 15px;
+    font-family: "Roboto Condensed", sans-serif;
+    box-shadow: 0 6px 4px -3px #000000;
+  }
+
+  /* About Us */
+  .section-about {
+    display: none;
+  }
+  .dentist-img {
+    float: left;
+    width: 21%;
+    padding-right: 15px;
+  }
+
+  .wrap-paragraph {
+    background-color: black;
+    float: none;
+    padding-right: 15px;
+    text-align: left;
+  }
+
+  /*About Us Network*/
+  .network {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 17px;
+  }
+  .network2 {
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 17px;
+  }
+  .network3 {
+    width: 80px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 17px;
+  }
+  /*Our Services*/
+  .services-icon {
+    width: 25%;
+  }
+
+  /* Loyalty */
+  ul {
+    text-align: left;
+    padding-left: 50px;
+  }
+
+  .loyalty-content {
+    max-width: 60%;
+    text-align: left;
+    padding-left: 30px;
+  }
+
+  .loyaltyBtn {
+    text-align: left;
+    padding-left: 30px;
+  }
+
+  /* Testimonials */
+  Carousel {
+    width: 100%;
+  }
+  /* Contact */
+  .contact-body {
+    display: none;
+  }
+
+  #contact-form {
+    margin: 0px 20% 20px 20%;
+  }
+  /*Footer*/
+  .section-footer {
+    margin-top: 380px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .footer-address {
+    font-size: 15pt;
+  }
+
+  .footer-content {
+    min-width: 250px;
+    text-align: center;
+  }
+
+  .social-icons {
+    width: 200px;
+    text-align: center;
+  }
+  .fab {
+    min-width: 100px;
+  }
+}
+/* End of @media only screen and (min-width: 1440px) */
+
+@media only screen and (min-width: 1824px) {
+  p,
+  .p-white {
+    font-size: 17pt;
+  }
+
+  .p-services {
+    font-size: 17pt;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 25pt;
+    text-align: center;
+  }
+  .h2-white {
+    text-align: center;
+    font-size: 25pt;
+  }
+  h6 {
+    font-size: 17pt;
+  }
+  li,
+  label {
+    font-size: 17pt;
+  }
+
+  .style-hr {
+    min-width: 50%;
+  }
+  /*-------------- Prevent Horizontal swipe ------------*/
+
+  body {
+    overflow-x: hidden !important;
+  }
+  .container {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+  /*------------ Background Images -------------*/
+  /* Header */
+  header {
+    width: 100%;
+    min-height: 105vh;
+    background: url("./components/img/dental-studiox1824.jpg");
+    background-position: top center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .section-loyalty {
+    background: url("./components/img/loyalty/smilex1824.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: 1px solid lightgray;
+  }
+
+  .wrap-content {
+    display: block;
+    background: url("./components/img/dentist-bgx1824.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-top: 1px solid lightgray;
+    position: relative;
+  }
+
+  .section-footer {
+    margin-top: 380px;
+    padding-top: 70px;
+    background: url("./components/img/dentist-bgx1824.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #04091e;
+    color: #fff;
+    padding-bottom: 20px;
+    border-top: 1px solid lightgray;
+  }
+
+  /*Navbar */
+  .call-today-sm {
+    display: none;
+    margin-right: 5px;
+    color: #ce8bc8;
+    /* padding: 5px;  */
+  }
+  .call-today-sm:hover {
+    color: rgb(196, 196, 12);
+  }
+
+  .logo {
+    margin-left: -90px;
+  }
+  .call-today {
+    display: block;
+  }
+  /*Side buttons*/
+  .appoint {
+    top: 30%;
+  }
+  .sidebtn {
+    display: inline-block;
+    margin-left: -25px;
+    text-align: right;
+    width: 180px;
+    height: 80px;
+    font-size: 17pt;
+    font-family: "Roboto Condensed", sans-serif;
+    box-shadow: 0 6px 4px -3px #000000;
+  }
+
+  /* Mission */
+  .mission {
+    width: 70%;
+  }
+
+  /* About Us */
+  .section-about {
+    display: none;
+  }
+  .dentist-img {
+    float: left;
+    width: 21%;
+    padding-right: 15px;
+  }
+
+  .wrap-paragraph {
+    float: none;
+    padding-right: 15px;
+    text-align: left;
+    width: 70%;
+  }
+
+  /*About Us Network*/
+  .network {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-bottom: 17px;
+  }
+  .network2 {
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 17px;
+  }
+  .network3 {
+    width: 80px;
+    height: 30px;
+    margin-right: 10px;
+    margin-bottom: 17px;
+  }
+  /*Our Services*/
+  .services-icon {
+    width: 15%;
+  }
+
+  /* Loyalty */
+  ul {
+    text-align: left;
+    padding-left: 50px;
+  }
+
+  .loyalty-content {
+    max-width: 60%;
+    text-align: left;
+    padding-left: 30px;
+  }
+
+  .loyaltyBtn {
+    text-align: left;
+    padding-left: 30px;
+  }
+
+  /* Testimonials */
+  Carousel {
+    width: 100%;
+  }
+  /* Contact */
+  .contact-body {
+    display: none;
+  }
+
+  #contact-form {
+    margin: 0px 40px 20px 40px;
+  }
+  /*Footer*/
+  .section-footer {
+    margin-top: 380px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+  }
+  .footer-address {
+    font-size: 15pt;
+  }
+
+  .footer-content {
+    min-width: 250px;
+    text-align: center;
+  }
+
+  .social-icons {
+    width: 200px;
+    text-align: center;
+  }
+  .fab {
+    min-width: 100px;
+  }
+}
+/* End of @media only screen and (min-width: 1224px) */

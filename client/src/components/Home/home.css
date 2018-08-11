@@ -1,0 +1,8 @@
+header {
+  width: 100%;
+  min-height: 85vh;
+  background: url("../img/dental-studio.jpg");
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}

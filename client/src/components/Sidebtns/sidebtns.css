@@ -1,0 +1,37 @@
+.appoint {
+  position: fixed;
+  margin-left: -25px;
+  top: 20%;
+  position: absolute;
+}
+
+.sidebtn {
+  margin-bottom: 5px;
+  margin-left: -20px;
+  width: 150px;
+  font-family: "Roboto Condensed", sans-serif;
+  box-shadow: 0 6px 4px -3px #000000;
+}
+
+/* .sidebtn:hover {
+  margin-bottom: 5px;
+  margin-left: -20px;
+  width: 150px;
+} */
+
+.call-today {
+  margin-right: 10px;
+  color: white;
+  text-decoration: white;
+  padding: 10px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 12pt;
+  background-color: #80697e;
+  border-radius: 0.2rem;
+}
+
+.call-today:hover {
+  color: white;
+  background-color: #ce8bc8;
+  text-decoration: none;
+}
